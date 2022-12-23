@@ -1,0 +1,29 @@
+.schedule {
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/1/7/4;   
+}
+.days-week{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+.days-week input {
+    border: none;
+    height: 50%;
+    margin-bottom:0.2rem;
+}
+.days-week input::placeholder {
+    position: relative;
+    top:-1.5rem;
+}
+.days-of-week {
+    background-color:#FFF0F5;
+}
+.weekend {
+    background-color:#E6E6FA;
+}
+p {
+    /* position absolute and relative, research in my notes */
+}
+

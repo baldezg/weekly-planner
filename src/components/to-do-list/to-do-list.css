@@ -1,0 +1,11 @@
+.to-do-list{
+    grid-area:2/4/3/7;
+    margin-bottom: 2rem;
+}
+.to-do-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: #575757 solid 1px;
+    outline: none;
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    grid-area:1/1/2/7;
+}
+.title-header {
+    font-family: var(--font-title);
+    margin:0;
+    margin-right: 1rem;
+    width:70%;
+}
+.week{
+    font-size: 1.2rem;
+    font: bold;
+}

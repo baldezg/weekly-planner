@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap');
+
+:root {
+  --font-title:'Dancing Script', cursive;
+  --main-color: #FFE4E1;
+}
+h4 {
+  text-align: center;
+}
+.grid {
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 2rem;
+  padding: 2.5rem;
+  padding-bottom: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
