@@ -2,18 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 const ScheduleAndEvents = () => {
-  const handleKeyDown = (event) => {
-      if(event.key === 'Enter') alert('working')
-    };
-  React.useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
 
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-  
-    
      const days = useFormik({
       initialValues: {
         monday: '',
@@ -27,6 +16,25 @@ const ScheduleAndEvents = () => {
           alert(JSON.stringify(values, null, 2));
         },
       });
+      const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          const input = event.target;
+          const div = document.createElement('div');
+          div.className = 'event ' + input.className;
+          div.textContent = input.placeholder + ' - ' + input.value;
+          const button = document.createElement('button');
+          button.textContent = 'Editar';
+          button.className = 'edit-button';
+          button.onclick = () => {
+            div.parentNode.replaceChild(input, div);
+            input.focus();
+          };
+          div.appendChild(button);
+          input.parentNode.replaceChild(div, input);
+        } 
+      }
+
       return (
         <div className='schedule'>
         <h4>CRONOGRAMA E EVENTOS</h4>
@@ -35,7 +43,8 @@ const ScheduleAndEvents = () => {
             className='days-of-week'
             type="text"
             name="monday"
-            placeholder='monday'
+            placeholder='Segunda'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.monday}
           />
@@ -43,7 +52,8 @@ const ScheduleAndEvents = () => {
             className='days-of-week'
             type="text"
             name="tuesday"
-            placeholder='Tuesday'
+            placeholder='Terça'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.tuesday}
           />
@@ -51,7 +61,8 @@ const ScheduleAndEvents = () => {
             className='days-of-week'
             type="text"
             name="wednesday"
-            placeholder='Wednesday'
+            placeholder='Quarta'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.wednesday}
           />
@@ -59,7 +70,8 @@ const ScheduleAndEvents = () => {
             className='days-of-week'
             type="text"
             name="thursday"
-            placeholder='Thursday'
+            placeholder='Quinta'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.thursday}
           />
@@ -67,7 +79,8 @@ const ScheduleAndEvents = () => {
             className='days-of-week'
             type="text"
             name="friday"
-            placeholder='Friday'
+            placeholder='Sexta'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.friday}
           />
@@ -75,7 +88,8 @@ const ScheduleAndEvents = () => {
             className='weekend'
             type="text"
             name="saturday"
-            placeholder='Saturday'
+            placeholder='Sábado'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.saturday}
           />
@@ -83,7 +97,8 @@ const ScheduleAndEvents = () => {
             className='weekend'
             type="text"
             name="sunday"
-            placeholder='Sunday'
+            placeholder='Domingo'
+            onKeyDown={handleKeyDown}
             onChange={days.handleChange}
             value={days.values.sunday}
           />
@@ -91,7 +106,6 @@ const ScheduleAndEvents = () => {
         </div>
       )}
     
-
 export default ScheduleAndEvents;
 
 
