@@ -11,6 +11,7 @@ import Notes from './components/notes/notes';
 import './components/notes/notes.css';
 import ThingsToGrateful from './components/things-to-grateful/things-to-grateful';
 import './components/things-to-grateful/things-to-grateful.css';
+import './components/to-do-item/to-do-item.css';
 
 
 function App() {

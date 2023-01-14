@@ -2,7 +2,7 @@
     grid-area:2/4/3/7;
     margin-bottom: 2rem;
 }
-.to-do-item {
+.to-do-input {
     background-color: transparent;
     border: none;
     border-bottom: #575757 solid 1px;

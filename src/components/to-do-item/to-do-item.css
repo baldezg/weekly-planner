@@ -1,0 +1,38 @@
+.to-do-item{
+    align-items: baseline;
+    display: flex;
+}
+.to-do-item p {
+    font-size: 1.5rem;
+}
+.to-do-item input[type="checkbox"],
+.to-do-item p{
+    margin-right: 0.5rem;
+}
+.edit-button-todo,
+.delete-button{
+    height: 1.8rem;
+    padding: 1px 3px;
+}
+.edit-button-todo{
+    background-color: #FFC0CB;
+    border: #fff solid 1px;
+    text-align:center;
+    color: #fff;
+}
+.delete-button{
+    background-color: #fff;
+    border: #fff solid 1px;
+    text-align:center;
+    color: #FFC0CB;
+}
+
+.edit-button-todo:hover,
+.delete-button:hover{
+    background-color: #c0fff4;
+    color: #FFC0CB;
+    transition: all 0.3s ease-in-out;
+}
+.done{
+    text-decoration: line-through;
+}
