@@ -6,6 +6,9 @@ import Button from '../button/button';
 
 const ToDoItem = (props) => {
     const [checked, setChecked] = React.useState(false);
+    const [edit, setEdit] = React.useState(false);
+    
+
     const handleCheckbox = (el) => {
         //toggle checkbox
         setChecked(!checked);
@@ -13,21 +16,23 @@ const ToDoItem = (props) => {
         console.log(p)
         p.style.textDecoration = checked ? 'none' : 'line-through';
     }
+    const handleEdit = () => {
+        setEdit(!edit)
+}
 
-    const handleEdit = (e) => {    
-        console.log('edit')
-        const div = e.target.parentNode.parentNode;
-        console.log(div)       
-    }
-   
     return(
         <div className='to-do-item'>
             <input onClick={handleCheckbox} type='checkbox' className='checkbox'></input>     
-            {checked ? <p className='done'>{props.text}</p> : <p>{props.text}</p>}
-            {checked ? false : <Button class='edit-button-todo' onClick={handleEdit} icon={<UilEdit/>}/>}
-            <Button class='delete-button' icon={<UilTrashAlt/>} />
+            {edit ? <input onChange={props.handleChange}></input> :
+            checked ? <p className='done'>{props.text}</p> : <p>{props.text}</p>}
+            
+            {checked ? false : !edit ? <Button class='edit-button-todo' onClick={handleEdit} icon={<UilEdit/>} /> : <Button class='edit-button' onClick={()=> props.saveTask} icon={<UilTrashAlt/>} />}
+
+            <Button class='delete-button'onClick={()=> props.deleteTask(props.id)} icon={<UilTrashAlt/>} />
         </div>
+        
     )
 }
+
 
 export default ToDoItem;

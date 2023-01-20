@@ -3,24 +3,41 @@ import ToDoItem from '../to-do-item/to-do-item';
 
 export default function ToDoList(){
     const [list, setList] = React.useState([]);
-    const [input, setInput] = React.useState('');
+    const [setInput] = React.useState('');
+    
+    const deleteTask = (id) => {
+        const newList = list.filter((item, index) => index !== id);
+        setList(newList);
+      }
 
+    const handleChange = (event) => {
+        
+
+    }
+
+    const saveTask = () => {
+        alert('saved');
+    }
     const handleKeyPress = (event) => {
+        
         if(event.key === 'Enter'){
             event.preventDefault();
             const input = event.target;
             setList([...list, input.value]);
             setInput(input);
             input.value = '';
-        }}
+        }
+    }
+    
     const rows = [];
 
 
         for(let i = 0; i < 5; i++){  
             rows.push(
-                list[i] ? <ToDoItem key={i} text={list[i]}/> : <input key={i} type='text' className='to-do-input' id={i} onKeyDown={handleKeyPress}/>
+                list[i] ? <ToDoItem key={i} handleChange={handleChange} deleteTask={deleteTask} saveTask={saveTask} text={list[i]} id={i}/> : <input key={i} type='text' className='to-do-input' id={i} onKeyDown={handleKeyPress}/>
             )
         }
+        
 
     return(
         <div className='to-do-list'>
@@ -29,3 +46,4 @@ export default function ToDoList(){
         </div>
     )
 }
+
