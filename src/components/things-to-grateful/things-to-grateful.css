@@ -2,7 +2,7 @@
     grid-area: 3/4/5/7;
 }
 
-.input{
+.grateful-list__input{
     background-color: transparent;
     border: none;
     border-bottom: #575757 solid 1px;
