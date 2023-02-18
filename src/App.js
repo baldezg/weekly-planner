@@ -14,8 +14,10 @@ import './components/things-to-grateful/things-to-grateful.css';
 import './components/to-do-item/to-do-item.css';
 
 
+
 function App() {
   return (
+    <>
     <div className='grid'>
     <Header />
     <ScheduleAndEvents />
@@ -23,6 +25,8 @@ function App() {
     <ThingsToGrateful />
     <Notes />
     </div>
+    <button className='button'>Save</button>
+    </>
   );
 }
 
