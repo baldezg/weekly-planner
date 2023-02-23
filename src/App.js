@@ -12,6 +12,7 @@ import './components/notes/notes.css';
 import ThingsToGrateful from './components/things-to-grateful/things-to-grateful';
 import './components/things-to-grateful/things-to-grateful.css';
 import './components/to-do-item/to-do-item.css';
+import Button from './components/button/button'
 
 
 
@@ -25,7 +26,9 @@ function App() {
     <ThingsToGrateful />
     <Notes />
     </div>
-    <button className='button'>Save</button>
+    <div className='submit-button'>
+    <Button icon="Salvar" class="btn-submit"/>
+    </div>
     </>
   );
 }
