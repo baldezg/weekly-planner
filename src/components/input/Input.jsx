@@ -1,9 +1,11 @@
+import './Input.css';
 
  const Input = (props) => {
   
     return (
+        <div>
         <input
-            type='text'
+            type={props.type}
             className={props.className}
             name={props.name}
             value={props.value}
@@ -11,7 +13,10 @@
             onBlur={props.onBlur}
             id={props.id}
             onKeyDown={props.handleKeyPress}
+            placeholder={props.placeholder}
             />
+        <span></span>
+        </div>
     )        
 }
 export default Input;

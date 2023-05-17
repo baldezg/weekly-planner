@@ -1,0 +1,23 @@
+.card{
+    background: radial-gradient(#f588d8, #c0a3e5);
+    border-radius: .2rem;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    margin:.5rem;
+    padding:.5rem;
+    transition: all 0.5s;
+    display:grid;
+}
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+.card__text{
+    color:white;   
+}
+.card__exit{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-self: end;
+}

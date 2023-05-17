@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@500;700;800&family=Noto+Sans:wght@500;700;800&family=Quicksand:wght@400;500;700&display=swap');
 
 :root {
-  --font-title:'Dancing Script', cursive;
+  /* colors */
   --main-color: #FFE4E1;
+  --purple:#662E9B;
+  --light-purple: #C48CF8;
+  --apricot:#FFCDB2;
+  --light-green:#84DD63;
+  --white: #fff;
+  
+  /* fonts */
+  --font-title:'Dancing Script', cursive;
+  --primarily-font: 'Quicksand', sans-serif;
+  --second-font: 'Montserrat', sans-serif;
+  --border-height: 1px;
+}
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--font-title)
 }
 h4 {
   text-align: center;
@@ -16,9 +37,7 @@ h4 {
   padding: 2.5rem;
   padding-bottom: 0;
   height: 100vh;
-  box-sizing: border-box;
 }
-
 
 .btn-submit{
   font-size: 28px;

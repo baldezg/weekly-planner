@@ -1,5 +1,78 @@
+// import React, { useState } from 'react';
+// import './ScheduleAndEvents.css';
+
+// const ScheduleAndEvents = () => {
+//   const [events, setEvents] = useState({
+//     Monday: [],
+//     Tuesday: [],
+//     Wednesday: [],
+//     Thursday: [],
+//     Friday: [],
+//     Saturday: [],
+//     Sunday: [],
+//   });
+
+//   const handleAddEvent = (event, day) => {
+//     event.preventDefault();
+//     const input = event.target.elements.event;
+//     const newEvent = input.value.trim();
+
+//     if (newEvent !== '') {
+//       setEvents((prevEvents) => ({
+//         ...prevEvents,
+//         [day]: [...prevEvents[day], newEvent],
+//       }));
+//       input.value = '';
+//     }
+//   };
+
+//   const handleDeleteEvent = (day, index) => {
+//     setEvents((prevEvents) => {
+//       const updatedEvents = { ...prevEvents };
+//       updatedEvents[day].splice(index, 1);
+//       return updatedEvents;
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <h4>Cronograma</h4>
+//       <ul className="schedule">
+//         {Object.entries(events).map(([day, dayEvents]) => (
+//           <li key={day} className="day-column">
+//             <h2>{day}</h2>
+//             <hr></hr>
+//             {dayEvents.length > 0 ? (
+//               <ul>
+//                 {dayEvents.map((event, index) => (
+//                   <li key={index}>
+//                     {event}{' '}
+//                     <button onClick={() => handleDeleteEvent(day, index)}>
+//                       Remover
+//                     </button>
+//                   </li>
+//                 ))}
+//               </ul>
+//             ) : (
+//               <p>Nenhum evento adicionado.</p>
+//             )}
+//             <form onSubmit={(e) => handleAddEvent(e, day)}>
+//               <input type="text" name="event" placeholder="Novo evento" />
+//               <button type="submit">Adicionar</button>
+//             </form>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default ScheduleAndEvents;
+
+
 import React from 'react';
 import { useFormik } from 'formik';
+import './ScheduleAndEvents.css';
 
 const ScheduleAndEvents = () => {
 
@@ -107,5 +180,6 @@ const ScheduleAndEvents = () => {
       )}
     
 export default ScheduleAndEvents;
+
 
 
