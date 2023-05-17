@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Input from '../input/Input';
+import Input from '../Input/Input';
 export default function ThingsToGrateful(){
     const [thingsToGrateful, setThingsToGrateful] = useState({
         thing1: '',
