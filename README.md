@@ -6,7 +6,9 @@ Esta aplicação é desenvolvida com ReactJS.
 Esta aplicação foi pensada para ser uma ferramenta utilizada para ajudar na organização pessoal. 
 Com esse objetivo ela possui estas utilidades:
 * Planejamento semanal:
-  Esta utilidade pode ser visualizada uma demonstração neste link.
+  Esta utilidade pode ser visualizada uma demonstração neste [link](https://weekly-planner-phi.vercel.app/).
+  ![image](https://github.com/baldezg/weekly-planner/assets/119074412/2d25462e-8b4a-4136-b7c2-35a6de0812bd)
+
   Ela se resume a quadro onde o usuário pode anotar eventos e compromissos nos dias da semana.
 * Lista de afazeres:
   Recurso para anotar suas tarefas e não esquecer de nenhuma.
