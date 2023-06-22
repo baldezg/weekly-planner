@@ -24,7 +24,7 @@ div{
     margin-top:0;
  }
 
-div span{
+.input + span{
     position: absolute;
   left: 0;
   bottom: 0;

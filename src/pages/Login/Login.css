@@ -1,0 +1,105 @@
+.form__container{
+    height: 100vh;
+    background-color: #f4f4ed;
+}
+.form__container,
+.form__section{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.form__section{
+    box-shadow: 0 4px 23px 0 rgba(0,0,0,.1);
+    flex-direction: column;
+    gap: 1rem;
+    width:45vw;
+}
+.input__container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.login__input{
+    border: 1px solid #ccc;
+    padding: .5rem;
+    outline: none;
+    border-radius:.5rem;
+}
+.login__input + span{
+    display: none;
+}
+.section__divider{
+    display:flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: .5rem;
+}
+.section__divider::before,
+.section__divider::after{
+    content: "";
+    background-color: rgb(221, 221, 221);
+    height: 1px;
+    width: 100%;
+}
+.socials__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+.socials__links a{
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 60%;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+h2 span{
+    color: var(--apricot);
+}
+.recover__password{
+    font-size:.75rem;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+}
+.button__container button{
+    background-color: var(--apricot);
+    border: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    box-shadow: 0 4px 23px 0 rgba(0,0,0,.1);
+    color: var(--white);
+    font-weight: 400;
+    transition: background-color .5s;
+    border-radius: 5px;
+    outline: none;
+}
+.button__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    margin-top: 1rem;
+    
+}
+.sign_container{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    padding: .5rem;
+    font-size:.86rem;
+}
+a{
+  color: #1f271b;
+}
+.icon{
+  height: 1.2rem;
+}

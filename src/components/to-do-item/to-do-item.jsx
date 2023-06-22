@@ -2,7 +2,7 @@
 import React from 'react';
 import { UilEdit } from '@iconscout/react-unicons';
 import { UilTrashAlt } from '@iconscout/react-unicons';
-import Button from '../button/button';
+import Button from '../Button/Button';
 import { useState } from 'react';
 
 const ToDoItem = (props) => {

@@ -3,7 +3,7 @@ import './App.css';
 // import "../node_modules/rsuite/dist/rsuite.css";
 // import Header from './components/Header'
 // import ScheduleAndEvents from './components/ScheduleAndEvents';
-import Schedule from './pages/Schedule/Schedule'
+import Schedule from './pages/Schedule/Schedule';
 // import ToDoList from './components/to-do-list/to-do-list';
 // import './components/to-do-list/to-do-list.css';
 // import Notes from './components/notes/notes';
@@ -13,7 +13,7 @@ import Schedule from './pages/Schedule/Schedule'
 // import './components/to-do-item/to-do-item.css';
 // import Button from './components/button/button'
 
-
+// import { Login } from './pages/Login/Login'
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
     <Button icon="Salvar" class="btn-submit"/>
     </div> */}
     <Schedule />
+    {/* <Login /> */}
     </>
   );
 }
