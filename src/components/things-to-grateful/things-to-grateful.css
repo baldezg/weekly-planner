@@ -9,3 +9,7 @@
     outline: none;
     width: 100%;
 }
+
+ol{
+    list-style-position: inside;
+}
